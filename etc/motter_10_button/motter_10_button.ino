@@ -14,7 +14,7 @@ void setup() {
 void loop() {
   buttonState = digitalRead(buttonPin);
   
-  if (buttonState == LOW && lastButtonState == HIGH) { // 버튼이 눌렸을 때만 실행
+  if (buttonState == LOW && lastButtonState == HIGH) { 
     pos += 10;
     if (pos > 180) {
       pos = 0;
@@ -22,6 +22,6 @@ void loop() {
     myServo.write(pos);
   }
   
-  lastButtonState = buttonState; // 버튼 상태를 기억하여 계속 감지
+  lastButtonState = buttonState; 
   delay(10);
 }
