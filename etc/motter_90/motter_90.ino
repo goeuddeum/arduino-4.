@@ -12,10 +12,10 @@ void setup() {
 
 void loop() {
   buttonState = digitalRead(buttonPin);  
-  if (buttonState == HIGH) {  // 버튼이 눌리면
+  if (buttonState == HIGH) {  
     pos += 90;  
-    if (pos > 180) {  // 모터 위치가 180도를 넘으면
-      pos = 0;  // 위치 초기화
+    if (pos > 180) {  
+      pos = 0;  
     }
     myServo.write(pos); 
     delay(1000); 
